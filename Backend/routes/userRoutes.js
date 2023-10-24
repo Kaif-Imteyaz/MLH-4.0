@@ -6,8 +6,13 @@ const router = express.Router();
 
 router.post("/signup", authController.signup);
 
-router.post("/login",authController.login);
+router.post("/login", authController.login);
 
-router.get('/scan',zapScanner.scriptRunner);
+router.get('/scan', authController.protect, zapScanner.scriptRunner);
+
+router.route('/forgotPassword').post(authController.forgotPassword);
+
+router.route('/resetPassword/:token').patch(authController.resetPassword);
+
 
 module.exports = router;
