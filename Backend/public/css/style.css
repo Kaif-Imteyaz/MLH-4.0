@@ -152,6 +152,18 @@ body{
 }
 .card{
     color: #333333;
+    margin-top: 3%;
+    width: 130%;
+    height: 100%;
+}
+.shBtn{
+    margin-top: 30px;
+}
+#cardA{
+    margin-left: -10%;
+}
+#card{
+    margin-left: 8%;
 }
 .row{
     padding-left: 18%;
