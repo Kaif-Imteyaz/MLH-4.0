@@ -1,0 +1,40 @@
+.navbar-color-section
+  nav.navbar.navbar-expand-lg.navbar-dark(aria-label="Offcanvas navbar large")
+    .container-fluid
+      a.navbar-brand(href="/homepage")
+        //- logo/brand
+        img.blend(src="img/vul-logo.png", style="width: 90px;", alt="") 
+        |   Vulture
+      button.navbar-toggler(type="button", data-bs-toggle="offcanvas", data-bs-target="#offcanvasNavbar2", aria-controls="offcanvasNavbar2")
+        span.navbar-toggler-icon
+      .navbar-color-section.offcanvas.offcanvas-end(tabindex="-1", id="offcanvasNavbar2", aria-labelledby="offcanvasNavbar2Label")
+        .offcanvas-header
+          h5.offcanvas-title#offcanvasNavbar2Label Vulture
+          button.btn-close.btn-close-white(type="button", data-bs-dismiss="offcanvas", aria-label="Close")
+        .offcanvas-body
+          ul.navbar-nav.justify-content-end.flex-grow-1.pe-3
+            li.nav-item
+              a.nav-link(aria-current="page", href="/homepage") Features
+            li.nav-item
+              a.nav-link(href="/aboutus") About Us
+            //- li.nav-item
+              //- a.nav-link(href="#") Help
+            li.nav-item
+              a.nav-link(href="#Contact") Contact Us
+              
+            //- li.nav-item
+              //- a.nav-link(href="#") Help
+            //- li.nav-item.dropdown
+              //- a.nav-link.dropdown-toggle(href="#", role="button", data-bs-toggle="dropdown", aria-expanded="false") Dropdown
+              //- ul.dropdown-menu
+                //- li: a.dropdown-item(href="#") Action
+                //- li: a.dropdown-item(href="#") Another action
+                //- li: hr.dropdown-divider
+                //- li: a.dropdown-item(href="#") Something else here
+          ul.navbar-nav.justify-content-end.flex-grow-1.pe-3
+            //- Nav-btn
+            li.nav-button
+              if user 
+                a.btn.btn-dark(aria-current="page", href="/me") #{user.name}
+              else  
+                a.btn.btn-dark(aria-current="page", href="/login") login
