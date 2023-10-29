@@ -1,0 +1,10 @@
+extends base
+
+block content 
+    div.container-fluid.main
+        div.input-group.mb-3#profilePage
+            input#targetUrl.form-control(type="text", placeholder="Paste your URL here", aria-label="Paste your URL here", aria-describedby="button-addon2")
+            a.btn.btn-success#button-addon2(type="button") Scan
+
+    div#scanPage
+        h4 Scanning...

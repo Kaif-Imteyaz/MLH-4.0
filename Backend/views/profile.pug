@@ -1,0 +1,35 @@
+extends base
+
+block content   
+    .container-fluid.prof.row#dashboard
+        h3.text-center Welcome, #{user.name}
+            .container-fluid.text-center.col-6(style="padding-top: 5%;")
+                p Name: #{user.name}
+                p Email: #{user.email}
+
+                #passwordChangeSection
+                    h4 Password Change
+                    button.btn.btn-secondary#changePasswordButton Change Passwords
+                    #passwordForm(style="display: none;")
+                        input(type="password", id="currentPassword", placeholder="Current Password")
+                        input(type="password", id="newPassword", placeholder="New Password")
+                        input(type="password", id="confirmPassword", placeholder="Confirm New Password")
+                        button.btn.btn-success#savePasswordButton Save
+
+    .col-6
+        h4.text-center(style="padding-top: 9%;") My Scans History
+        table(style="margin-left: 28%;")
+            thead
+                tr
+                    th Date
+                    th Scan Name
+                    th Status
+            tbody
+                tr
+                    td 2023-10-01
+                    td Scan 1
+                    td Completed
+                tr
+                    td 2023-09-15
+                    td Scan 2
+                    td Failed

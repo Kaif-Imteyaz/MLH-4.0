@@ -1,0 +1,15 @@
+extends base
+
+block content 
+    div.container-fluid.main
+        section.home#home
+            div.max-width
+                div.home-content
+                    div.text-3
+                        span.typing
+        div.d-grid.gap-2.col-6.mx-auto
+            button#getstart.btn.btn-outline-secondary.signUp(type="button") Get Started
+
+    div.container-fluid
+         div.threat-map
+            iframe(src="https://livethreatmap.radware.com/", width="100%", height="500px", scrolling="no", frameborder="0")
