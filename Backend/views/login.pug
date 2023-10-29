@@ -1,0 +1,62 @@
+extends base 
+
+block content 
+    section.containerA.forms
+        div.form.login
+            div.form-content
+                header#form-header Login
+                form(action="/scan")
+                    div.field.input-field
+                        input#email(type="email", placeholder="USE = test@mail.com", class="input")
+                    div.field.input-field
+                        input#password(type="password", placeholder="USE = joinmlh4", class="password")
+                        i.bi.bi-eye.bi-eye-slash.eye-icon
+                    div.form-link
+                        a(href="#", class="forgot-pass") Forgot password?
+                    div.field.button-field
+                        button(style="background-color: #1d1934;") Login
+                div.form-link.signup-link
+                    span Don't have an account? 
+                    a(href="#", class="link signup-link") Signup
+            div.line
+            div.login-buttons.btn-dark
+                //- Google Sign-in Button
+                button.bi.bi-google
+                //- GitHub Sign-in Button
+                button.bi.bi-github
+                //- Facebook Sign-in Button
+                button.bi.bi-facebook
+
+        //- Signup Form
+        div.form.signup
+            div.form-content
+                header Signup
+                form(action="#")
+                    div.field.input-field
+                        input(type="email", placeholder="Email", class="input")
+                    div.field.input-field
+                        input(type="password", placeholder="Create password", class="password")
+                        i.bi.bi-eye.bi-eye-slash.eye-icon
+                    div.field.input-field
+                        input(type="password", placeholder="Confirm password", class="password cnf")
+                        i.bi.bi-eye.bi-eye-slash.eye-icon
+                    div.form-check
+                        input.form-check-input(type="checkbox", value="", id="flexCheckChecked", checked)
+                        label.form-check-label(for="flexCheckChecked")
+                            | I agree to all statement in 
+                            a(href="") Terms of services
+                            |  and 
+                            a(href="") Privacy Policy
+                    div.field.button-field
+                        button(style="background-color: #1d1934;") Signup
+                div.form-link.signup-link
+                    span Already have an account? 
+                    a(href="#", class="link login-link") Login
+            div.line
+            div.login-buttons
+                //- Google Sign-in Button
+                button.bi.bi-google
+                //- GitHub Sign-in Button
+                button.bi.bi-github
+                //- Facebook Sign-in Button
+                button.bi.bi-facebook
